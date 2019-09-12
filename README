@@ -1,0 +1,49 @@
+﻿Author                         :        Pradnya Bhumkar
+Course                        :        TCSS 555 Autumn 2018
+Project Name                :        User Profiling in Social Media
+Description                :        This project predicts the Age, Gender, 5 OCEAN Personality traits such as (Agreeable, Neratic, Openness, Extrovert, Conscientious) using data present over social media such as status update, user likes, profile pictures etc for about 9500 users. 
+In this experiment we are using user status update information as a source of data and try to predict Age, gender, OCEAN Personality traits. 
+
+
+############################################################################
+Prerequisite: 
+Python 3.0 and above (Can use Pycharm/ Anaconda)
+Tenserflow
+Pandas
+Numpy
+Sklearn Library
+Keras
+
+
+############################################################################
+Running the code:
+For running this code one should have social media data for users.
+Save the user data folder on particular location.
+Give path of that folder to the following variables in the code.
+
+
+output_dir = path of the folder + "/public-test-data/output_folder"
+train_text_dir = path of the folder + '/training/text/'
+test_text_dir = path of the folder + '/public-test-data/text/'
+train_liwc_file = path of the folder + '/training/LIWC/LIWC.csv'
+train_profile_file = path of the folder +'/training/profile/profile.csv'
+test_profile_file = path of the folder + 'public-test-data/profile/profile.csv'
+test_liwc_file = path of the folder + '/public-test-data/LIWC/LIWC.csv'
+
+
+############################################################################
+Note that output_dir contains the path to the output folder. Once the code is successfully run, this output folder will have xml files for each user which contains predicted values for that user.
+
+
+The source code folder contains 3 python files 
+AgeGenderPrediction.py : contains methods to predict Age and gender hence the output folder resulted from this file contains prediction of age and gender only. Other parameters are same as that of the baseline.
+
+
+PersonalityTraitsPrediction.py : contains methods to predict 5 OCEAN personality traits hence the output folder resulted from this file contains prediction of OCEAN personality only. Other parameters are same as that of the baseline.
+
+
+NeuralNetworkPesonality.py : contains methods to predict 5 OCEAN personality traits but it does not contain method to write the predicted values in the xml file. Hence this file, when run
+Will not produce the output directory.
+
+
+############################################################################
